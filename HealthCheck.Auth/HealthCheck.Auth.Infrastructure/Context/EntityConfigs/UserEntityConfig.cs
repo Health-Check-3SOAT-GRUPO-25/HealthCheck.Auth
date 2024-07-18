@@ -39,7 +39,7 @@ public class UserEntityConfig : IEntityTypeConfiguration<User>
                 "000000",
                 "Doctor One",
                 "doctor1@healthcheck.com",
-                "",
+                "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                 UserRole.Doctor
             ),
             new User(
@@ -47,7 +47,7 @@ public class UserEntityConfig : IEntityTypeConfiguration<User>
                 "111111",
                 "Doctor Two",
                 "doctor2@healthcheck.com",
-                "",
+                "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                 UserRole.Doctor
             ),
             new User(
@@ -55,7 +55,7 @@ public class UserEntityConfig : IEntityTypeConfiguration<User>
                 null!,
                 "Patient One",
                 "patient1@healthcheck.com",
-                "",
+                "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                 UserRole.Patient
             ),
             new User(
@@ -63,7 +63,7 @@ public class UserEntityConfig : IEntityTypeConfiguration<User>
                 null!,
                 "Patient Two",
                 "patient2@healthcheck.com",
-                "",
+                "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                 UserRole.Patient
             )
         );
