@@ -68,7 +68,7 @@ namespace HealthCheck.Auth.Infrastructure.Migrations
                             Crm = "000000",
                             Email = "doctor1@healthcheck.com",
                             Name = "Doctor One",
-                            PasswordHash = "",
+                            PasswordHash = "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                             UserRole = 0
                         },
                         new
@@ -78,7 +78,7 @@ namespace HealthCheck.Auth.Infrastructure.Migrations
                             Crm = "111111",
                             Email = "doctor2@healthcheck.com",
                             Name = "Doctor Two",
-                            PasswordHash = "",
+                            PasswordHash = "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                             UserRole = 0
                         },
                         new
@@ -88,7 +88,7 @@ namespace HealthCheck.Auth.Infrastructure.Migrations
                             CreatedAt = new DateTime(2024, 7, 17, 21, 47, 31, 41, DateTimeKind.Utc).AddTicks(7115),
                             Email = "patient1@healthcheck.com",
                             Name = "Patient One",
-                            PasswordHash = "",
+                            PasswordHash = "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                             UserRole = 1
                         },
                         new
@@ -98,7 +98,7 @@ namespace HealthCheck.Auth.Infrastructure.Migrations
                             CreatedAt = new DateTime(2024, 7, 17, 21, 47, 31, 41, DateTimeKind.Utc).AddTicks(7504),
                             Email = "patient2@healthcheck.com",
                             Name = "Patient Two",
-                            PasswordHash = "",
+                            PasswordHash = "$2a$11$C99.K9/gfTc0RqR8XYAiu.T3BG/GvWgOt2oggKkyivz9dGpZPwpEy",
                             UserRole = 1
                         });
                 });
