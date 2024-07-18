@@ -1,1 +1,1 @@
-# HealthCheck.Auth2
+# HealthCheck.Auth
