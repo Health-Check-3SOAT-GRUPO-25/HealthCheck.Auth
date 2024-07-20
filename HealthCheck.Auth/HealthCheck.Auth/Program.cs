@@ -1,8 +1,8 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using HealthCheck.Auth.IOC;
+using HealthCheck.Auth.IOC.Configurations;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,15 +48,6 @@ builder.Services.AddSwaggerGen(options =>
         }
     );
 
-    options.IncludeXmlComments
-    (
-        Path.Combine
-        (
-            AppContext.BaseDirectory,
-            $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"
-        )
-    );
-
     options.EnableAnnotations();
 });
 
@@ -76,5 +67,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+ConfigureDatabase.RunMigrations(app);
 
 app.Run();

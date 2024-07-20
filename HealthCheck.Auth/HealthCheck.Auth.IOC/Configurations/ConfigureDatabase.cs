@@ -1,4 +1,5 @@
 ﻿using HealthCheck.Auth.Infrastructure.Context;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,10 +10,10 @@ namespace HealthCheck.Auth.IOC.Configurations;
 public static class ConfigureDatabase
 {
     public static void Register
-       (
-           IServiceCollection services,
-           IConfiguration configuration
-       )
+    (
+        IServiceCollection services,
+        IConfiguration configuration
+    )
     {
         services
             .AddEntityFrameworkSqlServer()
@@ -27,5 +28,17 @@ public static class ConfigureDatabase
                               errorNumbersToAdd: null);
                       });
             });
+    }
+
+    public static void RunMigrations(WebApplication app)
+    {
+        using var scope = app.Services.CreateScope();
+
+        var dbContext = scope.ServiceProvider.GetService<ApplicationDbContext>();
+
+        if (dbContext is not null)
+        {
+            dbContext.Database.Migrate();
+        }
     }
 }
