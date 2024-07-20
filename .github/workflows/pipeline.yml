@@ -1,4 +1,4 @@
-name: Pipeline 
+name: HealthCheck Auth - Pipeline 
 
 on:
   push:
