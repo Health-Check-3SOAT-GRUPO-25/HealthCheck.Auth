@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: healthcheck-auth
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: healthcheck-auth
+    spec:
+      containers:
+        - name: healthcheck-auth
+          image: ${IMAGE_URI}
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+            - name: ASPNETCORE_URLS
+              value: http://*:5000
+            - name: ConnectionStrings__DefaultConnection
+              value: Server=${DB_ADDRESS},1433;Database=${DB_NAME};User Id=${DB_USER};TrustServerCertificate=True;Password=${DB_PASSWORD};
+            - name: Jwt__Issuer
+              value: ${JWT_ISSUER}
+            - name: Jwt__Audience
+              value: ${JWT_AUDIENCE}
+            - name: Jwt__SecretKey
+              value: ${JWT_SECRETKEY}
+
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "200m"
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
+          volumeMounts:
+            - name: tz-config
+              mountPath: /etc/localtime
+      volumes:
+        - name: tz-config
+          hostPath:
+            path: /usr/share/zoneinfo/America/Sao_Paulo
+  selector:
+    matchLabels:
+      app: healthcheck-auth
