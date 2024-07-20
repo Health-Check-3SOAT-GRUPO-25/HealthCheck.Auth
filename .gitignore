@@ -396,4 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-/src/BurgerRoyale.Auth.API/appsettings.development.json
+/HealthCheck.Auth/HealthCheck.Auth/appsettings.Development.json
