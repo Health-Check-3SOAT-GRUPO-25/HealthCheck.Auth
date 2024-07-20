@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Auth.API", "HealthCheck.Auth\HealthCheck.Auth.API.csproj", "{84A7F810-1A97-414F-9B6A-38A10916DBCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Auth.API", "HealthCheck.Auth.API\HealthCheck.Auth.API.csproj", "{84A7F810-1A97-414F-9B6A-38A10916DBCE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1BF3B860-D634-40E4-B243-38E3B4F1F185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Auth.Application", "HealthCheck.Application\HealthCheck.Auth.Application.csproj", "{37CCD470-73B9-48E9-839E-908C25DB9185}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Auth.Application", "HealthCheck.Auth.Application\HealthCheck.Auth.Application.csproj", "{37CCD470-73B9-48E9-839E-908C25DB9185}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Auth.Domain", "HealthCheck.Auth.Domain\HealthCheck.Auth.Domain.csproj", "{EBEB8857-F55A-45EA-8A07-5F83AC580DA3}"
 EndProject

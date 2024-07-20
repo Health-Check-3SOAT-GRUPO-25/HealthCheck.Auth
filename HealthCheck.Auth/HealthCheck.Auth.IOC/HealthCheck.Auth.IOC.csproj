@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HealthCheck.Application\HealthCheck.Auth.Application.csproj" />
+    <ProjectReference Include="..\HealthCheck.Auth.Application\HealthCheck.Auth.Application.csproj" />
     <ProjectReference Include="..\HealthCheck.Auth.Domain\HealthCheck.Auth.Domain.csproj" />
     <ProjectReference Include="..\HealthCheck.Auth.Infrastructure\HealthCheck.Auth.Infrastructure.csproj" />
   </ItemGroup>
